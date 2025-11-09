@@ -1,0 +1,15 @@
+name: "Anthropology"
+natural_query: |
+  PhD student or PhD (recent) in anthropology/sociology/economics from a top program,
+  focused on ethnography, migration, or cultural identity; strong publication or teaching record.
+hard:
+  degrees_any_of: ["phd","doctorate"]
+  domain_years:
+    title_keywords: ["phd candidate","doctoral researcher","research assistant","anthropology"]
+    min_years: 1
+soft:
+  prefer_recent_update_months: 48
+  prefer_titles_any_of: ["phd candidate","doctoral researcher","lecturer","researcher"]
+  prefer_keywords: ["ethnography","fieldwork","migration","cultural identity","sociology","economics"]
+weights: { ann: 0.40, rerank: 0.45, features: 0.15 }
+limits: { ann_top_k: 500, final_k: 10 }

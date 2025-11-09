@@ -1,0 +1,15 @@
+name: "Mathematics PhD"
+natural_query: |
+  Mathematician with a PhD focused on statistics/probability or applied math; strong publication record;
+  teaching or mentoring experience; capable of applied work in ML/optimization.
+hard:
+  degrees_any_of: ["phd","doctorate"]
+  domain_years:
+    title_keywords: ["research","postdoctoral","assistant professor","mathematics","statistics","probability"]
+    min_years: 3
+soft:
+  prefer_recent_update_months: 48
+  prefer_titles_any_of: ["postdoctoral researcher","assistant professor","research scientist"]
+  prefer_keywords: ["stochastic","bayesian","optimization","probability","statistics","measure theory"]
+weights: { ann: 0.35, rerank: 0.50, features: 0.15 }
+limits: { ann_top_k: 500, final_k: 10 }

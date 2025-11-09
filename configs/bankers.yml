@@ -1,0 +1,28 @@
+name: "Bankers"
+natural_query: |
+  Healthcare-focused investment banker with an MBA from a U.S. university and 2+ years of banking experience.
+  Worked on healthcare M&A, recapitalizations, capital raises; familiarity with provider/payer/RCM/medtech.
+hard:
+  degrees_any_of: ["mba"]
+  require_us_mba: true
+  domain_years:
+    title_keywords:
+      - "investment banking"
+      - "m&a"
+      - "corporate finance"
+      - "capital markets"
+      - "levfin"
+      - "equity research"
+      - "analyst"
+      - "associate"
+    min_years: 2
+soft:
+  prefer_recent_update_months: 36
+  prefer_titles_any_of: ["investment banking analyst","investment banking associate","m&a"]
+  prefer_keywords: ["healthcare","medtech","rcm","provider","payer","hcit"]
+  degree_bonus: {"mba": 0.3}
+  domain_years_bonus:
+    title_keywords: ["investment banking","m&a","corporate finance","capital markets","levfin"]
+    threshold: 3
+weights: { ann: 0.35, rerank: 0.50, features: 0.15 }
+limits: { ann_top_k: 600, final_k: 10 }

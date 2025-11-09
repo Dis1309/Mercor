@@ -1,0 +1,17 @@
+name: "Doctors (MD)"
+natural_query: |
+  U.S.-trained physician with 2+ years of clinical experience as a General Practitioner / Primary Care.
+  Comfortable with EHR systems, telemedicine, outpatient/family medicine.
+hard:
+  degrees_any_of: ["md","doctorate"]
+  country_any_of: ["united states","usa","us"]
+  domain_years:
+    title_keywords: ["physician","general practitioner","primary care","family medicine","internal medicine"]
+    min_years: 2
+soft:
+  prefer_recent_update_months: 36
+  prefer_titles_any_of: ["physician","general practitioner","primary care physician"]
+  prefer_keywords: ["ehr","telemedicine","outpatient","clinic","primary care"]
+  degree_bonus: {"md": 0.2}
+weights: { ann: 0.35, rerank: 0.50, features: 0.15 }
+limits: { ann_top_k: 600, final_k: 10 }

@@ -1,0 +1,18 @@
+name: "Tax Lawyer"
+natural_query: |
+  Corporate tax lawyer with a JD from a U.S. law school and 3+ years of legal practice.
+  Experience advising on tax implications of M&A/corporate transactions, handling IRS audits/disputes,
+  and drafting legal opinions/filings for federal and state tax compliance.
+hard:
+  degrees_any_of: ["jd"]
+  min_total_years_bucket: "3"
+  domain_years:
+    title_keywords: ["tax attorney","tax lawyer","associate","corporate lawyer","counsel","solicitor"]
+    min_years: 3
+soft:
+  prefer_recent_update_months: 36
+  prefer_titles_any_of: ["tax attorney","associate","corporate lawyer","tax counsel"]
+  prefer_keywords: ["irs","m&a","tax compliance","cross-border","transfer pricing","corporate tax"]
+  degree_bonus: {"llm": 0.4}
+weights: { ann: 0.35, rerank: 0.50, features: 0.15 }
+limits: { ann_top_k: 500, final_k: 10 }

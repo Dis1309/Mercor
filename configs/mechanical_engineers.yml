@@ -1,0 +1,14 @@
+name: "Mechanical Engineers"
+natural_query: |
+  Mechanical engineer with 3+ years in product development/structural design; strong CAD (SolidWorks/AutoCAD)
+  and simulation tools (ANSYS/COMSOL). Experience across concept → prototype → testing/manufacturing.
+hard:
+  domain_years:
+    title_keywords: ["mechanical engineer","product design","structural","mechatronics","thermal","fluids"]
+    min_years: 3
+soft:
+  prefer_recent_update_months: 36
+  prefer_titles_any_of: ["mechanical engineer","product development engineer","design engineer"]
+  prefer_keywords: ["solidworks","cad","autocad","ansys","comsol","fea","cfd","prototype","manufacturing"]
+weights: { ann: 0.40, rerank: 0.45, features: 0.15 }
+limits: { ann_top_k: 600, final_k: 10 }

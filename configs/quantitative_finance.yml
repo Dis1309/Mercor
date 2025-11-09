@@ -1,0 +1,15 @@
+name: "Quantitative Finance"
+natural_query: |
+  Quant with an MBA from a top U.S. program or advanced degree in math/stats; 3+ years in quantitative finance:
+  risk modeling, algorithmic trading, portfolio optimization; Python/Quantlib/SQL experience.
+hard:
+  domain_years:
+    title_keywords: ["quant","quantitative analyst","research","risk","trading","modeling","portfolio"]
+    min_years: 3
+soft:
+  prefer_recent_update_months: 36
+  prefer_titles_any_of: ["quantitative analyst","quant researcher","risk modeler"]
+  prefer_keywords: ["python","quantlib","options","risk","alpha","backtesting","portfolio optimization"]
+  degree_bonus: {"phd": 0.3, "mba": 0.2, "master's": 0.2}
+weights: { ann: 0.35, rerank: 0.50, features: 0.15 }
+limits: { ann_top_k: 600, final_k: 10 }

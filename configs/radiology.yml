@@ -1,0 +1,16 @@
+name: "Radiology"
+natural_query: |
+  Radiologist (MD) with board certification (ABR/FRCR or equivalent) and 3+ years experience
+  reading CT and MRI scans; experienced with diagnostic workflows and AI applications in imaging.
+hard:
+  degrees_any_of: ["md","doctorate"]       # MD or equivalent medical doctorate
+  domain_years:
+    title_keywords: ["radiologist","radiology","imaging","diagnostic radiology"]
+    min_years: 3
+soft:
+  prefer_recent_update_months: 36
+  prefer_titles_any_of: ["radiologist","consultant radiologist","attending radiologist"]
+  prefer_keywords: ["abr","frcr","ct","mri","pacs","dicom","ai"]
+  degree_bonus: {"md": 0.3}
+weights: { ann: 0.35, rerank: 0.50, features: 0.15 }
+limits: { ann_top_k: 600, final_k: 10 }

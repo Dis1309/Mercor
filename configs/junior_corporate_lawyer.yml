@@ -1,0 +1,15 @@
+name: "Junior Corporate Lawyer"
+natural_query: |
+  Junior corporate/M&A lawyer (0–3 years) at a leading firm or in-house at a large organization.
+  Strong drafting and negotiation exposure on commercial contracts and due diligence.
+hard:
+  degrees_any_of: ["jd"]
+  domain_years:
+    title_keywords: ["associate","corporate lawyer","m&a","legal counsel","solicitor"]
+    min_years: 1
+soft:
+  prefer_recent_update_months: 36
+  prefer_titles_any_of: ["associate","corporate lawyer","legal counsel"]
+  prefer_keywords: ["m&a","due diligence","commercial contracts","cross-border","closings"]
+weights: { ann: 0.40, rerank: 0.45, features: 0.15 }
+limits: { ann_top_k: 500, final_k: 10 }

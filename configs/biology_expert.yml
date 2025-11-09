@@ -1,0 +1,15 @@
+name: "Biology Expert"
+natural_query: |
+  Biologist with a PhD from a U.S./U.K./Canada university; expertise in molecular biology/genetics,
+  with peer-reviewed publications and experience in CRISPR/PCR/sequencing or wet-lab methods.
+hard:
+  degrees_any_of: ["phd","doctorate"]
+  domain_years:
+    title_keywords: ["research scientist","postdoctoral","biologist","molecular biology","genetics"]
+    min_years: 3
+soft:
+  prefer_recent_update_months: 48
+  prefer_titles_any_of: ["research scientist","postdoctoral researcher","senior scientist"]
+  prefer_keywords: ["crispr","pcr","sequencing","molecular biology","gene expression","wet lab"]
+weights: { ann: 0.35, rerank: 0.50, features: 0.15 }
+limits: { ann_top_k: 500, final_k: 10 }

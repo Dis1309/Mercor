@@ -1,0 +1,8 @@
+turbopuffer
+voyageai
+openai>=1.50.0
+pydantic
+pyyaml
+requests
+rapidfuzz
+python-dateutil
